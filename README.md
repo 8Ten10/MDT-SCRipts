@@ -56,3 +56,21 @@ UserLocale=0409:00000409
 InputLocale= 0409:00000409
 KeyboardLocale= 0409:00000409
 EventService=http://WSUS:9800
+
+```
+
+```
+Applications Installation
+
+```
+%SCRIPTROOT%\Joindomain.ps1
+
+cmd.exe /c "%SCRIPTROOT%\vmwaretools.exe /S /v REBOOT=R" => works but will not install in quiet mode
+%SCRIPTROOT%\vmwaretools.exe /S /v "/qn REBOOT=R" => Didnt try
+
+vmware.exe /S /v "/qn REBOOT=R" => works well in Install one application
+msiexec /qn /norestart /i googlechromestandaloneenterprise64.msi  works well
+MsiExec.exe /i "firefox.msi" /qn works well
+
+```
+
