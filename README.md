@@ -1,7 +1,7 @@
 # MDT-SCRipts
 
 ```
-Bootstrap.ini
+### Bootstrap.ini
 
 [Settings]
 Priority=Default
@@ -17,7 +17,7 @@ SkipBDDWelcome=YES
 
 ```
 ```
-CustomSettings.ini
+### CustomSettings.ini
 [Settings]
 Priority=Default
 Properties=MyCustomProperty
@@ -59,14 +59,15 @@ EventService=http://WSUS:9800
 
 ```
 
-```
-Applications Installation
+
+## Applications Installation
 
 ```
-%SCRIPTROOT%\Joindomain.ps1
+%SCRIPTROOT%\Joindomain.ps1 #Powershell to automatically joint the DC
 
-cmd.exe /c "%SCRIPTROOT%\vmwaretools.exe /S /v REBOOT=R" => works but will not install in quiet mode
-%SCRIPTROOT%\vmwaretools.exe /S /v "/qn REBOOT=R" => Didnt try
+cmd.exe /c "%SCRIPTROOT%\vmwaretools.exe /S /v REBOOT
+
+%SCRIPTROOT%\vmwaretools.exe /S /v "/qn REBOOT=R" 
 
 vmware.exe /S /v "/qn REBOOT=R" => works well in Install one application
 msiexec /qn /norestart /i googlechromestandaloneenterprise64.msi  works well
